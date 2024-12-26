@@ -1,0 +1,7 @@
+#faq {
+    background-image: url('../assets/Swell.svg'); /* Adjust the path if needed */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center center; /* Center the background */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    padding: 40px 0; /* Optional: Adds padding around the content */
+  }
