@@ -3,7 +3,7 @@ import "./com.css";
 
 const Support = () => {
   return (
-    <div className="container-fluid text-center py-5"style={{backgroundColor:'pink'}} >
+    <div id="donation" className="container-fluid text-center py-5"style={{backgroundColor:'pink'}} >
       <h1 className="mb-4">Support Our Mission Today!</h1>
       <p className="mb-4">
         Your contributions help us make a positive impact. Join us in our mission to create a better tomorrow.

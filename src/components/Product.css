@@ -1,0 +1,46 @@
+/* Add this to your CSS file */
+.card {
+    height: 100%;
+  }
+  
+  .card-img-top {
+    object-fit: cover;  /* Ensures the image covers the area of the image container */
+    height: 200px;      /* Fixed height for the image, adjust as necessary */
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  /* Add this to your CSS file */
+.card-img-top {
+    object-fit: cover;
+    height: 200px;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card-body button {
+    margin-top: 10px;
+  }
+  
+  .container {
+    margin-top: 20px;
+  }
+  
+  .card-title {
+    font-weight: bold;
+  }
+  

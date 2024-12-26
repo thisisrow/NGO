@@ -4,7 +4,7 @@ import { backgrounds } from "../constant";
 const Hero = () => {
   const fontSize = window.innerWidth < 780 ? "2rem" : "4rem";
   return (
-    <>
+    <div id="hero">
     <div className="position-relative vh-100 overflow-hidden">
       {/* Video background */}
       <video
@@ -27,7 +27,7 @@ const Hero = () => {
         </p>
       </div>
     </div>
-    </>
+    </div>
   );
 };
 

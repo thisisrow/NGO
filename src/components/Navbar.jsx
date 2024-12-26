@@ -8,15 +8,15 @@ const Navbar = () => {
         zIndex: 111,
         top: 0,
       }}
-      className="container-fluid mt-3 fs-5 "
+      className="container-fluid mt-3 fs-5"
     >
-      <nav class="navbar navbar-expand-lg bg-body-tertiary rounded-pill p-2">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">
-            Sushermala 
+      <nav className="navbar navbar-expand-lg bg-body-tertiary rounded-pill p-2">
+        <div className="container-fluid">
+          <a className="navbar-brand" href="#">
+            Sushermala
           </a>
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -24,46 +24,45 @@ const Navbar = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span class="navbar-toggler-icon"></span>
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav">
+              <li className="nav-item">
+                <a className="nav-link" href="#hero">
                   Home
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
+              <li className="nav-item">
+                <a className="nav-link" href="#about">
                   About
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                Product
+              <li className="nav-item">
+                <a className="nav-link" href="#products">
+                  Product
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                NGO Activities
+              <li className="nav-item">
+                <a className="nav-link" href="#activities">
+                  NGO Activities
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                Donation
+              <li className="nav-item">
+                <a className="nav-link" href="#donation">
+                  Donation
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                Order
+              <li className="nav-item">
+                <a className="nav-link" href="#order">
+                  Order
                 </a>
               </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">
-                Contact
+              <li className="nav-item">
+                <a className="nav-link" href="#contact">
+                  Contact
                 </a>
               </li>
-              
             </ul>
           </div>
         </div>

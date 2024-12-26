@@ -4,7 +4,7 @@ import "./com.css"; // Add styles for better customization
 import bg from "../assets/lotus-product.svg";
 const Order = () => {
   return (
-    <div className="container-fluid ">
+    <div id="order" className="container-fluid ">
       {/* Header Section */}
       <div className="d-flex flex-column justify-content-center align-items-center">
         <h1 className="align-self-center">Payment</h1>

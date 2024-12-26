@@ -3,9 +3,10 @@ import g1 from "../assets/image/jell.jpg";
 import g2 from "../assets/image/pooja1.jpg";
 import "./com.css";
 import bg from "../assets/lotus-product.svg";
+import {Link} from "react-router-dom"
 const Products = () => {
   return (
-    <div className="container-fluid position-relative">
+    <div id="products" className="container-fluid position-relative">
       <img
         src={bg}
         className="position-absolute "
@@ -27,9 +28,9 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="#" className="btn btn-primary fs-5 rounded-pill">
-                Go somewhere
-              </a>
+              <Link to="/pujaa" className="btn btn-primary fs-5 rounded-pill">
+                Go Puja
+              </Link>
             </div>
           </div>
         </div>
@@ -42,9 +43,9 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <a href="#" className="btn btn-primary fs-5 rounded-pill">
-                Go somewhere
-              </a>
+              <Link to="/jewellery" className="btn btn-primary fs-5 rounded-pill">
+                Go jewellery
+              </Link>
             </div>
           </div>
         </div>

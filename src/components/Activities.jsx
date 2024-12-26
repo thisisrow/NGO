@@ -31,7 +31,7 @@ const cards = [
 
 const Activities = () => {
   return (
-    <div className="container-fluid py-5">
+    <div id="activities" className="container-fluid py-5">
       <h1 className="text-center mb-4">Activities</h1>
       <div className="row g-4 justify-content-center">
         {cards.map((card, index) => (

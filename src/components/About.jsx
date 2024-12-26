@@ -2,8 +2,8 @@ import React from "react";
 import './com.css'
 const About = () => {
   return (
-    <>
-      <div id="about" className="container-fluid">
+    <div id="about">
+      <div  className="container-fluid">
         <div className="row d-flex justify-content-center align-items-center">
           <div className="col-10">
             <h1 className="my-3">Our Mission Matters</h1>
@@ -16,7 +16,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

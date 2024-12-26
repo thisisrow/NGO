@@ -42,7 +42,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="container-fluid d-flex m-2">
+    <div id="contact" className="container-fluid d-flex m-2">
       <h1 className="contact-title fs-1 m-3">Contact </h1>
       {/* Contact Form */}
       <div className="container">
