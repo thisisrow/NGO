@@ -1,16 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Pujaa from "./Pujaa";
 import Jewellery from "./Jewellery";
 import Cart from "./Cart";
 import Kits from "./Kits";
 import "./Product.css";
+
 const AllProduct = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const section = params.get("section");
+
+    if (section) {
+      const target = document.getElementById(section);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
   return (
     <div>
-      <h1 className="bg-black p-4 ">All Products</h1>
-
+      <h1 className="bg-black p-4">All Products</h1>
       <button
-        className="btn btn-primary position-fixed bottom-0 end-0 z-3  "
+        className="btn btn-primary position-fixed bottom-0 end-0 z-3"
         type="button"
         data-bs-toggle="offcanvas"
         data-bs-target="#offcanvasScrolling"
@@ -29,7 +44,7 @@ const AllProduct = () => {
       >
         <div className="offcanvas-header">
           <h5 className="offcanvas-title" id="offcanvasScrollingLabel">
-          Shopping Cart
+            Shopping Cart
           </h5>
           <button
             type="button"
@@ -42,6 +57,7 @@ const AllProduct = () => {
           <Cart />
         </div>
       </div>
+
       <Pujaa />
       <Jewellery />
       <Kits />

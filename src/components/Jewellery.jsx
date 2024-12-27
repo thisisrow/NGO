@@ -124,7 +124,7 @@ const Jewellery = () => {
   ];
 
   return (
-    <div>
+    <div id="jewellery">
       <div className="container">
         <h2 className="">Jewellery</h2>
         <div className="row">

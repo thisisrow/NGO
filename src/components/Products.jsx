@@ -17,10 +17,13 @@ const Products = () => {
             <img src={card[0]} className="card-img-top" alt="Product 1" />
             <div className="card-body">
               <h5 className="card-title">Jewellery</h5>
-              
+
               <Link
-                to="/all"
-                className="btn btn-primary fs-5 rounded-pill   align-self-center"
+                to={{
+                  pathname: "/all",
+                  search: "?section=jewellery", // Add query for specific section
+                }}
+                className="btn btn-primary fs-5 rounded-pill align-self-center"
               >
                 Buy
               </Link>
@@ -35,12 +38,15 @@ const Products = () => {
             <img src={card[1]} className="card-img-top" alt="Product 2" />
             <div className="card-body">
               <h5 className="card-title">Puja</h5>
-              
+
               <Link
-                to="/all"
-                className="btn btn-primary fs-5 rounded-pill  align-self-center"
+                to={{
+                  pathname: "/all",
+                  search: "?section=puja", // Add query for specific section
+                }}
+                className="btn btn-primary fs-5 rounded-pill align-self-center"
               >
-                 Buy
+                Buy
               </Link>
             </div>
           </div>
