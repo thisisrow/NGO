@@ -1,6 +1,5 @@
 import React from "react";
-import g1 from "../assets/image/jell.jpg";
-import g2 from "../assets/image/pooja1.jpg";
+import {card} from '../constant'
 import "./com.css";
 import bg from "../assets/lotus-product.svg";
 import {Link} from "react-router-dom"
@@ -21,7 +20,7 @@ const Products = () => {
       <div className="row d-flex justify-content-around align-items-center">
         <div className="col-sm-12 col-md-6 d-flex justify-content-around">
           <div className="card product-card">
-            <img src={g1} className="card-img-top" alt="Product 1" />
+            <img src={card[0]} className="card-img-top" alt="Product 1" />
             <div className="card-body">
               <h5 className="card-title">Card title</h5>
               <p className="card-text">
@@ -36,7 +35,7 @@ const Products = () => {
         </div>
         <div className="col-sm-12 col-md-6 d-flex justify-content-around">
           <div className="card product-card">
-            <img src={g2} className="card-img-top" alt="Product 2" />
+            <img src={card[1]} className="card-img-top" alt="Product 2" />
             <div className="card-body">
               <h5 className="card-title">Card title</h5>
               <p className="card-text">

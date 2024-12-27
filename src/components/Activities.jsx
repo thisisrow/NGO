@@ -1,29 +1,27 @@
 import React from "react";
-import branch from "../assets/image/branch.jpg";
-import contact from "../assets/image/contact.jpg";
-import distribution from "../assets/image/distbustion.jpg";
-import donation from "../assets/image/donation.jpeg";
+import activ  from "../constant";  // Correct way to import named export
+
 import { motion } from "framer-motion";
 import "./com.css";
 
 const cards = [
   {
-    image: branch,
+    image: activ[0],
     title: "Volunteering",
     description: "Join Us! Help recycle temple flowers into eco-friendly products. Volunteer today!",
   },
   {
-    image: contact,
+    image: activ[1],
     title: "Branch Opening",
     description: "Become a Branch Opener! Let’s recycle temple flowers into useful products and make a difference together!",
   },
   {
-    image: distribution,
+    image: activ[2],
     title: "Distributor",
     description: "Spread the Green! Help us distribute eco-friendly products made from recycled flowers. Get involved!",
   },
   {
-    image: donation,
+    image: activ[3],
     title: "Donation",
     description: "Support Us! Donate to help us recycle temple flowers into sustainable products. Every bit counts!",
   },

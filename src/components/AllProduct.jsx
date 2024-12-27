@@ -2,6 +2,7 @@ import React from "react";
 import Pujaa from "./Pujaa";
 import Jewellery from "./Jewellery";
 import Cart from "./Cart";
+import Kits from "./Kits";
 import "./Product.css";
 const AllProduct = () => {
   return (
@@ -43,6 +44,7 @@ const AllProduct = () => {
       </div>
       <Pujaa />
       <Jewellery />
+      <Kits />
     </div>
   );
 };
