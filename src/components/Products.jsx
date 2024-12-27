@@ -28,7 +28,7 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <Link to="/pujaa" className="btn btn-primary fs-5 rounded-pill">
+              <Link to="/pujaa" className="btn btn-primary fs-5 rounded-pill   align-self-center">
                 Go Puja
               </Link>
             </div>
@@ -43,7 +43,7 @@ const Products = () => {
                 Some quick example text to build on the card title and make up
                 the bulk of the card's content.
               </p>
-              <Link to="/jewellery" className="btn btn-primary fs-5 rounded-pill">
+              <Link to="/jewellery" className="btn btn-primary fs-5 rounded-pill  align-self-center">
                 Go jewellery
               </Link>
             </div>

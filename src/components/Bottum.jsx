@@ -20,9 +20,9 @@ const Bottum = () => {
           <div className="col-md-4">
             <h4 className="footer-title">Follow Us</h4>
             <ul className="social-links list-unstyled">
-                <li><a href="https://www.facebook.com/RegdNGO?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer " className="Facebook"><FaFacebook /> Facebook</a></li>
-              <li><a href="https://www.youtube.com/@sushirmalafoundationtogetherwe" target="_blank" rel="noopener noreferrer " className="YouTube"><FaYoutube /> YouTube</a></li>
-              <li><a href="https://www.instagram.com/sushirmalafoundation2022/?igsh=dGxwcmNha2pjZ3V3" target="_blank" rel="noopener noreferrer " className="Instagram"><FaInstagram /> Instagram</a></li>
+                <li><a href="https://www.facebook.com/RegdNGO?mibextid=ZbWKwL" target="_blank" rel="noopener noreferrer " className="facebook"><FaFacebook /> Facebook</a></li>
+              <li><a href="https://www.youtube.com/@sushirmalafoundationtogetherwe" target="_blank" rel="noopener noreferrer " className="youTube"><FaYoutube /> YouTube</a></li>
+              <li><a href="https://www.instagram.com/sushirmalafoundation2022/?igsh=dGxwcmNha2pjZ3V3" target="_blank" rel="noopener noreferrer " className="instagram"><FaInstagram /> Instagram</a></li>
             </ul>
           </div>
 

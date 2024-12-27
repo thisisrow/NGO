@@ -1,13 +1,14 @@
 import React from "react";
 import './com.css'
 const About = () => {
+  const fontSize = window.innerWidth < 780 ? "0.7rem" : "1.2rem";
   return (
     <div id="about">
       <div  className="container-fluid">
         <div className="row d-flex justify-content-center align-items-center">
           <div className="col-10">
             <h1 className="my-3">Our Mission Matters</h1>
-            <h5>
+            <h5 style={{fontSize:`${fontSize}`,}} className="text-capitalize">
               The foundation was originally incorporated in 2017 as SUSHIRNIRMAL FOUNDATION by the founder Dr. Neeta Srivastava Prasad in the loving memory of her late father Shri Sushilchandra Srivastava. Later in 2023 it was registered as an NGO under the Company Section 8 Act with two directors Mrs. Nirmala Srivastava and Dr. Neeta Srivastava Prasad. <br />
               At Sushirmala Foundation, we believe in the power of community. Our mission is to uplift those in need through innovative programs and heartfelt initiatives. We’re not just an NGO; we’re a family of passionate individuals dedicated to making a difference. <br />
               From distributing essential supplies to organizing vibrant events, we strive to create a positive impact in the lives of many. Our activities range from pooja ceremonies to fun-filled volunteering opportunities that bring joy and purpose to our work. <br />

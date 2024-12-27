@@ -42,17 +42,17 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact" className="container-fluid d-flex m-2">
-      <h1 className="contact-title fs-1 m-3">Contact </h1>
+    <div id="contact" className="container-fluid">
+      <h1 className=" fs-1 m-3 text-center mb-4 ">Contact </h1>
       {/* Contact Form */}
       <div className="container">
-        <form ref={formRef} onSubmit={handleSubmit} className="contact-form">
-          <div className="form-field">
-            <label className="form-label">Name</label>
+        <form ref={formRef} onSubmit={handleSubmit} className="form-control m-1 d-flex flex-column justify-content-center">
+          <div className="mb-3">
+            <label className="form-label" >Name</label>
             <input
               type="text"
               name="name"
-              className="form-input"
+              className="form-control"
               placeholder="Your Name"
               value={form.name}
               onChange={handleChange}
@@ -64,7 +64,7 @@ const Contact = () => {
             <input
               type="email"
               name="email"
-              className="form-input"
+              className="form-control"
               placeholder="Your Email"
               value={form.email}
               onChange={handleChange}
@@ -76,7 +76,7 @@ const Contact = () => {
             <input
               type="tel"
               name="phone"
-              className="form-input"
+              className="form-control"
               placeholder="Your Phone Number"
               value={form.phone}
               onChange={handleChange}
@@ -87,14 +87,14 @@ const Contact = () => {
             <textarea
               name="message"
               rows="4"
-              className="form-textarea"
+              className="form-control"
               placeholder="Your Message"
               value={form.message}
               onChange={handleChange}
               required
             ></textarea>
           </div>
-          <button type="submit" className="form-button" disabled={loading}>
+          <button type="submit" className="btn btn-primary m-1 w-50  align-self-center"  disabled={loading}>
             {loading ? "Sending..." : "Submit"}
           </button>
         </form>
