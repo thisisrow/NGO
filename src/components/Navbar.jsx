@@ -1,6 +1,7 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
+  
   return (
     <div
       style={{
@@ -10,11 +11,11 @@ const Navbar = () => {
       }}
       className="container-fluid mt-3 fs-5"
     >
-      <nav className="navbar navbar-expand-lg bg-body-tertiary rounded-pill p-2">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary  p-2">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <Link className="navbar-brand" to="/">
             Sushermala
-          </a>
+          </Link>
           <button
             className="navbar-toggler"
             type="button"

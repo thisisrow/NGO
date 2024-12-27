@@ -9,7 +9,7 @@ const Support = () => {
         Your contributions help us make a positive impact. Join us in our mission to create a better tomorrow.
       </p>
       <div className="d-flex justify-content-center gap-3">
-        <button className="btn btn-primary btn-lg rounded-pill px-4">
+        <button className="btn btn-primary btn-lg rounded-pill px-4z">
           Donate Used Clothes
         </button>
         <button className="btn btn-secondary btn-lg rounded-pill px-4">
