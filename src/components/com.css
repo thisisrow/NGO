@@ -55,58 +55,7 @@
   width: 100%; /* Full-width button for uniformity */
 }
 
-/* Order Component Styling */
 
-.order-card {
-  width: 18rem;
-  height: auto;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  overflow: hidden;
-  margin: 10px;
-  
-}
-
-.qr-img {
-  height: 200px;
-  object-fit: cover;
-  padding: 10px;
-}
-
-.card-body {
-  padding: 15px;
-}
-
-.card-title {
-  font-size: 1.2rem;
-  font-weight: 600;
-}
-
-.card-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-
-@media (max-width: 768px) {
-  .order-card {
-    width: 90%;
-    margin: 15px 0;
-  }
-
-  .qr-img {
-    height: 150px;
-  }
-
-  .card-title {
-    font-size: 1rem;
-  }
-
-  .card-text {
-    font-size: 0.85rem;
-  }
-}
-
-/* Activities Component Styling */
 
 /* Ensure all images are of the same size */
 .activity-img {

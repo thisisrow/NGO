@@ -15,7 +15,7 @@ const FirstPage = () => {
    <>
     
     <Hero />
-    <RollingGallery autoplay={true} pauseOnHover={true} />
+    {/* <RollingGallery autoplay={true} pauseOnHover={true} /> */}
     <About />
     <Products />
     <Order />

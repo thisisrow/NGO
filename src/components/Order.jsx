@@ -10,17 +10,11 @@ const Order = () => {
         <h1 className="align-self-center">Payment</h1>
         <p>Buy and support Environment</p>
       </div>
-     <div className="position-relative">
-     <img
-        src={bg}
-        className="position-absolute "
-        style={{top: '40%', left: '42%'}}
-      ></img> 
-     </div>
+
       {/* Card Section */}
-      <div className="row d-flex justify-content-around align-items-center">
+      <div className="row d-flex justify-content-around align-items-center ">
         {/* QR Code Card */}
-        <div className="col-sm-12 col-md-6 d-flex justify-content-center">
+        <div className="col-sm-12 col-md-5 d-flex justify-content-center">
           <div className="card order-card">
             <img src={qr} className="card-img-top qr-img" alt="QR Code" />
             <div className="card-body text-center">
@@ -30,7 +24,11 @@ const Order = () => {
         </div>
 
         {/* Bank Details Card */}
-        <div className="col-sm-12 col-md-6 d-flex justify-content-center">
+        <div className="col-sm-12 col-md-1 d-flex justify-content-center">
+          <img src={bg}></img>
+        </div>
+        {/* Bank Details Card */}
+        <div className="col-sm-12 col-md-5 d-flex justify-content-center">
           <div className="card order-card">
             <div className="card-body text-center">
               <h5 className="card-title">Bank Details</h5>

@@ -3,8 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import BlobCursor from "./BlobCursor";
 import Navbar from "./components/Navbar";
 import Bottum from "./components/Bottum";
-// import Pujaa from "./components/Pujaa";
-// import Jewellery from "./components/Jewellery";
 import FirstPage from "./FirstPage";
 import AllProduct from "./components/AllProduct";
 import { CartProvider } from "./Context/CartContext";

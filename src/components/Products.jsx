@@ -1,49 +1,46 @@
 import React from "react";
-import {card} from '../constant'
+import { card } from "../constant";
 import "./com.css";
 import bg from "../assets/lotus-product.svg";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 const Products = () => {
   return (
-    <div id="products" className="container-fluid position-relative">
-      <img
-        src={bg}
-        className="position-absolute "
-        style={{top: '40%', left: '40%'}}
-      ></img>
-
+    <div id="products" className="container-fluid ">
       <div className="d-flex flex-column justify-content-center align-items-center">
         <h1 className="align-self-center">Product</h1>
         <p>Buy and support Environment</p>
       </div>
 
       <div className="row d-flex justify-content-around align-items-center">
-        <div className="col-sm-12 col-md-6 d-flex justify-content-around">
+        <div className="col-sm-12 col-md-5 d-flex justify-content-around">
           <div className="card product-card">
             <img src={card[0]} className="card-img-top" alt="Product 1" />
             <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <Link to="/all" className="btn btn-primary fs-5 rounded-pill   align-self-center">
-                Go Puja
+              <h5 className="card-title">Jewellery</h5>
+              
+              <Link
+                to="/all"
+                className="btn btn-primary fs-5 rounded-pill   align-self-center"
+              >
+                Buy
               </Link>
             </div>
           </div>
         </div>
-        <div className="col-sm-12 col-md-6 d-flex justify-content-around">
+        <div className="col-sm-12 col-md-1 d-flex justify-content-center">
+          <img src={bg}></img>
+        </div>
+        <div className="col-sm-12 col-md-5 d-flex justify-content-around">
           <div className="card product-card">
             <img src={card[1]} className="card-img-top" alt="Product 2" />
             <div className="card-body">
-              <h5 className="card-title">Card title</h5>
-              <p className="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-              <Link to="/all" className="btn btn-primary fs-5 rounded-pill  align-self-center">
-                Go jewellery
+              <h5 className="card-title">Puja</h5>
+              
+              <Link
+                to="/all"
+                className="btn btn-primary fs-5 rounded-pill  align-self-center"
+              >
+                 Buy
               </Link>
             </div>
           </div>

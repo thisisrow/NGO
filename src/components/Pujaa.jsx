@@ -61,7 +61,7 @@ const Pujaa = () => {
   return (
     <div>
       
-      <div className="container">
+      <div className="container" id="puja">
         <h2 className="mt-5">Puja</h2>
         <div className="row">
           {card.map((item, index) => (
