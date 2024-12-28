@@ -1,20 +1,26 @@
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import "./com.css"; // Custom CSS file for styling
+import { SiTruenas } from "react-icons/si";
 
 const Contact = () => {
   const formRef = useRef();
-  const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
+  const [form, setForm] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
   const [loading, setLoading] = useState(false);
-
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
   };
+  const [notify, setNotify] = useState(false);
+  const [notify_Erroe, setNotify_Erroe] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setLoading(true);
-
     emailjs
       .send(
         import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
@@ -30,13 +36,12 @@ const Contact = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Message sent successfully!");
+          setNotify(true);
           setForm({ name: "", email: "", phone: "", message: "" });
         },
         (error) => {
           setLoading(false);
-          console.error("Error sending message:", error);
-          alert("Failed to send the message. Please try again.");
+          setNotify_Erroe(true);
         }
       );
   };
@@ -46,9 +51,25 @@ const Contact = () => {
       <h1 className=" fs-1 m-3 text-center mb-4  ">Contact </h1>
       {/* Contact Form */}
       <div className="container">
-        <form ref={formRef} onSubmit={handleSubmit} className="form-control m-1 d-flex flex-column justify-content-center">
+        {notify && (
+          <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          <strong>"Message sent successfully!"</strong> You will receive Call on your Number in short time
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        )}
+        {notify_Erroe && (
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>"Message not sent!"</strong> 
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        )}
+        <form
+          ref={formRef}
+          onSubmit={handleSubmit}
+          className="form-control m-1 d-flex flex-column justify-content-center"
+        >
           <div className="mb-3">
-            <label className="form-label" >Name</label>
+            <label className="form-label">Name</label>
             <input
               type="text"
               name="name"
@@ -94,7 +115,11 @@ const Contact = () => {
               required
             ></textarea>
           </div>
-          <button type="submit" className="btn btn-primary m-1 w-50  align-self-center"  disabled={loading}>
+          <button
+            type="submit"
+            className="btn btn-primary m-1 w-50  align-self-center"
+            disabled={loading}
+          >
             {loading ? "Sending..." : "Submit"}
           </button>
         </form>

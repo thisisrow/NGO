@@ -8,7 +8,8 @@ const Cart = () => {
   const [form, setForm] = useState({ name: "", email: "", phone: "", message: "" });
   const [loading, setLoading] = useState(false);
   const [showModal, setShowModal] = useState(false);
-
+  const [notify, setNotify] = useState(false);
+  const [notify_Erroe, setNotify_Erroe] = useState(false);
   const handleBuy = () => {
     setShowModal(true);
     const cartDetails = cart
@@ -39,14 +40,13 @@ const Cart = () => {
       .then(
         () => {
           setLoading(false);
-          alert("Message sent successfully!");
+          setNotify(true);
           setForm({ name: "", email: "", phone: "", message: "" });
           setShowModal(false);
         },
         (error) => {
           setLoading(false);
-          console.error("Error sending message:", error);
-          alert("Failed to send the message. Please try again.");
+          setNotify(true);
         }
       );
   };
@@ -54,6 +54,18 @@ const Cart = () => {
   return (
     <div className="container mt-5">
       <div className="row">
+      {notify && (
+          <div class="alert alert-primary alert-dismissible fade show" role="alert">
+          <strong>"Message sent successfully!"</strong> You will receive Call on your Number in short time
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        )}
+        {notify_Erroe && (
+          <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <strong>"Message not sent!"</strong> 
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        )}
         {cart.length > 0 ? (
           <>
             {cart.map((cartItem, index) => (
