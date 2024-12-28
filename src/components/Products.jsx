@@ -7,7 +7,7 @@ const Products = () => {
   return (
     <div id="products" className="container-fluid ">
       <div className="d-flex flex-column justify-content-center align-items-center">
-        <h1 className="align-self-center">Product</h1>
+        <h1 className="align-self-center mt-5">Product</h1>
         <p>Buy and support Environment</p>
       </div>
 

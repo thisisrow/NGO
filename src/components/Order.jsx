@@ -7,7 +7,7 @@ const Order = () => {
     <div id="order" className="container-fluid ">
       {/* Header Section */}
       <div className="d-flex flex-column justify-content-center align-items-center">
-        <h1 className="align-self-center">Payment</h1>
+        <h1 className="align-self-center mt-5">Payment</h1>
         <p>Buy and support Environment</p>
       </div>
 

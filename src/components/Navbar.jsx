@@ -9,7 +9,7 @@ const Navbar = () => {
         zIndex: 111,
         top: 0,
       }}
-      className="container-fluid mt-3 fs-5"
+      className="container-fluid  fs-5  "
     >
       <nav className="navbar navbar-expand-lg bg-body-tertiary  p-2">
         <div className="container-fluid">

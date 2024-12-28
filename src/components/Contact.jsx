@@ -43,7 +43,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className="container-fluid">
-      <h1 className=" fs-1 m-3 text-center mb-4 ">Contact </h1>
+      <h1 className=" fs-1 m-3 text-center mb-4  ">Contact </h1>
       {/* Contact Form */}
       <div className="container">
         <form ref={formRef} onSubmit={handleSubmit} className="form-control m-1 d-flex flex-column justify-content-center">
