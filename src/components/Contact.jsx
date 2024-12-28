@@ -42,6 +42,8 @@ const Contact = () => {
         (error) => {
           setLoading(false);
           setNotify_Erroe(true);
+          console.log("Error in send ing form",error);
+          
         }
       );
   };
