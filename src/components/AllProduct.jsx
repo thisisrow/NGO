@@ -4,6 +4,7 @@ import Pujaa from "./Pujaa";
 import Jewellery from "./Jewellery";
 import Cart from "./Cart";
 import Kits from "./Kits";
+import Navbar from "./Navbar";
 import "./Product.css";
 
 const AllProduct = () => {
@@ -23,7 +24,8 @@ const AllProduct = () => {
 
   return (
     <div>
-      <h1 className="bg-black p-4">All Products</h1>
+      {/* <Navbar /> */}
+      <h1 className="bg-light p-4">All Products</h1>
       <button
         className="btn btn-primary position-fixed bottom-0 end-0 z-3"
         type="button"
@@ -46,6 +48,7 @@ const AllProduct = () => {
           <h5 className="offcanvas-title" id="offcanvasScrollingLabel">
             Shopping Cart
           </h5>
+          
           <button
             type="button"
             className="btn-close"

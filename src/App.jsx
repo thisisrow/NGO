@@ -6,6 +6,7 @@ import Bottum from "./components/Bottum";
 import FirstPage from "./FirstPage";
 import AllProduct from "./components/AllProduct";
 import { CartProvider } from "./Context/CartContext";
+import Activuty_form from "./components/Activuty_form";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Routes>
           <Route path="/" element={<FirstPage />} />
           <Route path="/all" element={<AllProduct />} />
+          <Route path="/form" element={<Activuty_form />} />
         </Routes>
         <Bottum />
       </BrowserRouter>

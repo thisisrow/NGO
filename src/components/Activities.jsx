@@ -1,6 +1,6 @@
 import React from "react";
 import activ  from "../constant";  // Correct way to import named export
-
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./com.css";
 
@@ -28,6 +28,7 @@ const cards = [
 ];
 
 const Activities = () => {
+  const navigate = useNavigate();
   return (
     <div id="activities" className="container-fluid py-5">
       <h1 className="text-center mb-4">Activities</h1>
@@ -44,7 +45,9 @@ const Activities = () => {
                 <div className="card-body text-center">
                   <h5 className="card-title">{card.title}</h5>
                   <p className="card-text">{card.description}</p>
-                  <button className="btn btn-primary rounded-pill px-4">Join</button>
+                  <button className="btn btn-primary rounded-pill px-4" onClick={()=>{
+                    navigate("/form");
+                  }} >Join</button>
                 </div>
               </div>
            

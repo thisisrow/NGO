@@ -9,11 +9,11 @@ import Activities from './components/Activities';
 import Support from './components/Support';
 import FAQ from './components/FAQ';
 import Contact from './components/Contact';
-
+import Navbar from "./components/Navbar";
 const FirstPage = () => {
   return (
    <>
-    
+    {/* <Navbar /> */}
     <Hero />
     {/* <RollingGallery autoplay={true} pauseOnHover={true} /> */}
     <About />
