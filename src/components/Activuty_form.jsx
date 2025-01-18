@@ -97,7 +97,7 @@ const Activuty_form = () => {
         <h1 className="display-4">Contact Us</h1>
         <div className="row">
           {/* Form Section */}
-          <div className="col-sm-12">
+          <div className="col-sm-12 col-lg-6">
             <form
               ref={formRef}
               onSubmit={handleSubmit}
@@ -161,7 +161,7 @@ const Activuty_form = () => {
           </div>
 
           {/* Dynamic Text Section */}
-          <div className="col-sm-12">
+          <div className="col-sm-12 col-lg-6">
             <div className="text-center">
               <h2>{text || "Default Text"}</h2>
               <h6>{dtext}</h6>
