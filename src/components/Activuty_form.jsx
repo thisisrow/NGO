@@ -3,7 +3,6 @@ import { backgrounds } from "../constant";
 import emailjs from "@emailjs/browser";
 import { useLocation } from "react-router-dom"; // Import useLocation
 
-// import "./com.css";
 
 const Activuty_form = () => {
   const location = useLocation(); // Retrieve location object
