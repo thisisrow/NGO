@@ -7,7 +7,8 @@ import "./com.css";
 
 const Activuty_form = () => {
   const location = useLocation(); // Retrieve location object
-  const { text } = location.state || {}; // Extract text from location.state
+  const { text = "Default Text", dtext = "No additional info" } = location.state || {};
+ // Extract text from location.state
 
   const fontSize = window.innerWidth < 780 ? "2rem" : "4rem";
   const formRef = useRef();
@@ -184,7 +185,8 @@ const Activuty_form = () => {
                 {/* Dynamic Text Section */}
                 <div className="col-6">
                   <div className="text-center">
-                    <h3>{text || "Default Text"}</h3>
+                    <h4>{text || "Default Text"}</h4>
+                    <h6>{dtext}</h6>
                   </div>
                 </div>
               </div>
