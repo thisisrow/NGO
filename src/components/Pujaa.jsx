@@ -67,7 +67,7 @@ const Pujaa = () => {
           {card.map((item, index) => (
             <div key={index} className="col-lg-3 col-md-6 col-sm-12 mb-4">
               <div className="card">
-                <img src={item.img} alt={item.title} className="card-img-top" />
+                <img src={item.img} alt={item.title} className="card-img-top object-fit-contain" />
                 <div className="card-body">
                   <h5 className="card-title">{item.title}</h5>
                   <p className="card-text">Code: {item.code}</p>

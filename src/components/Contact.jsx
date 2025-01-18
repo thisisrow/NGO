@@ -65,6 +65,8 @@ const Contact = () => {
           <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         )}
+        <div className="row d-flex justify-content-center">
+          <div className="col-8 ">
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -125,6 +127,8 @@ const Contact = () => {
             {loading ? "Sending..." : "Submit"}
           </button>
         </form>
+        </div>
+        </div>
       </div>
     </div>
   );

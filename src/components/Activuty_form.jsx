@@ -1,9 +1,14 @@
 import React, { useRef, useState, useEffect } from "react";
 import { backgrounds } from "../constant";
 import emailjs from "@emailjs/browser";
+import { useLocation } from "react-router-dom"; // Import useLocation
+
 import "./com.css";
 
 const Activuty_form = () => {
+  const location = useLocation(); // Retrieve location object
+  const { text } = location.state || {}; // Extract text from location.state
+
   const fontSize = window.innerWidth < 780 ? "2rem" : "4rem";
   const formRef = useRef();
   const [form, setForm] = useState({
@@ -56,127 +61,138 @@ const Activuty_form = () => {
   };
 
   return (
-    <>
-      <div id="hero">
-        <div className="position-relative vh-100 overflow-hidden">
-          {/* Video background */}
-          <video
-            src={backgrounds}
-            autoPlay
-            loop
-            muted
-            className="position-absolute top-0 start-0 w-100 h-100"
-            style={{ objectFit: "cover" }}
-          ></video>
+    <div id="hero">
+      <div className="position-relative vh-100 overflow-hidden">
+        {/* Video background */}
+        <video
+          src={backgrounds}
+          autoPlay
+          loop
+          muted
+          className="position-absolute top-0 start-0 w-100 h-100"
+          style={{ objectFit: "cover" }}
+        ></video>
 
-          {/* Centered content */}
-          <div className="d-flex justify-content-center align-items-center position-relative z-index-1 h-100 text-center">
-            <p
-              id="glass"
-              className="fw-bold col-9 p-3"
-              style={{
-                fontSize: `${fontSize}`,
-                zIndex: 2,
-                display: "table-column",
-                color: "black",
-              }}
-            >
-              <div className="container">
-                {notify && (
-                  <div
-                    className="alert alert-primary alert-dismissible fade show"
-                    role="alert"
-                  >
-                    <strong>"Message sent successfully!"</strong> You will
-                    receive a call on your number shortly.
-                    <button
-                      type="button"
-                      className="btn-close"
-                      data-bs-dismiss="alert"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                )}
-                {notify_Error && (
-                  <div
-                    className="alert alert-danger alert-dismissible fade show"
-                    role="alert"
-                  >
-                    <strong>"Message not sent!"</strong>
-                    <button
-                      type="button"
-                      className="btn-close"
-                      data-bs-dismiss="alert"
-                      aria-label="Close"
-                    ></button>
-                  </div>
-                )}
-                <form
-                  ref={formRef}
-                  onSubmit={handleSubmit}
-                  className="form-control m-1 d-flex flex-column justify-content-center"
+        {/* Centered content */}
+        <div className="d-flex justify-content-center align-items-center position-relative z-index-1 h-100 text-center">
+          <p
+            id="glass"
+            className="fw-bold col-9 p-3"
+            style={{
+              fontSize: `${fontSize}`,
+              zIndex: 2,
+              display: "table-column",
+              color: "black",
+            }}
+          >
+            <div className="container">
+              {notify && (
+                <div
+                  className="alert alert-primary alert-dismissible fade show"
+                  role="alert"
                 >
-                  <div className="mb-3">
-                    <label className="form-label">Name</label>
-                    <input
-                      type="text"
-                      name="name"
-                      className="form-control"
-                      placeholder="Your Name"
-                      value={form.name}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div className="form-field">
-                    <label className="form-label">Email</label>
-                    <input
-                      type="email"
-                      name="email"
-                      className="form-control"
-                      placeholder="Your Email"
-                      value={form.email}
-                      onChange={handleChange}
-                      required
-                    />
-                  </div>
-                  <div className="form-field">
-                    <label className="form-label">Phone</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      className="form-control"
-                      placeholder="Your Phone Number"
-                      value={form.phone}
-                      onChange={handleChange}
-                    />
-                  </div>
-                  <div className="form-field">
-                    <label className="form-label">Message</label>
-                    <textarea
-                      name="message"
-                      rows="4"
-                      className="form-control"
-                      placeholder="Your Message"
-                      value={form.message}
-                      onChange={handleChange}
-                      required
-                    ></textarea>
-                  </div>
+                  <strong>"Message sent successfully!"</strong> You will
+                  receive a call on your number shortly.
                   <button
-                    type="submit"
-                    className="btn btn-primary m-1 w-50 align-self-center"
-                    disabled={loading}
+                    type="button"
+                    className="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"
+                  ></button>
+                </div>
+              )}
+              {notify_Error && (
+                <div
+                  className="alert alert-danger alert-dismissible fade show"
+                  role="alert"
+                >
+                  <strong>"Message not sent!"</strong>
+                  <button
+                    type="button"
+                    className="btn-close"
+                    data-bs-dismiss="alert"
+                    aria-label="Close"
+                  ></button>
+                </div>
+              )}
+              <h1 className="display-4">Contact Us</h1>
+              <div className="row">
+                {/* Form Section */}
+                <div className="col-6">
+                  <form
+                    ref={formRef}
+                    onSubmit={handleSubmit}
+                    className="form-control m-1 d-flex flex-column justify-content-center"
                   >
-                    {loading ? "Sending..." : "Submit"}
-                  </button>
-                </form>
+                    <div className="mb-3">
+                      <label className="form-label">Name</label>
+                      <input
+                        type="text"
+                        name="name"
+                        className="form-control"
+                        placeholder="Your Name"
+                        value={form.name}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div className="form-field">
+                      <label className="form-label">Email</label>
+                      <input
+                        type="email"
+                        name="email"
+                        className="form-control"
+                        placeholder="Your Email"
+                        value={form.email}
+                        onChange={handleChange}
+                        required
+                      />
+                    </div>
+                    <div className="form-field">
+                      <label className="form-label">Phone</label>
+                      <input
+                        type="tel"
+                        name="phone"
+                        className="form-control"
+                        placeholder="Your Phone Number"
+                        value={form.phone}
+                        onChange={handleChange}
+                      />
+                    </div>
+                    <div className="form-field">
+                      <label className="form-label">Message</label>
+                      <textarea
+                        name="message"
+                        rows="4"
+                        className="form-control"
+                        placeholder="Your Message"
+                        value={form.message}
+                        onChange={handleChange}
+                        required
+                      ></textarea>
+                    </div>
+                    <button
+                      type="submit"
+                      className="btn btn-primary m-1 w-50 align-self-center"
+                      disabled={loading}
+                    >
+                      {loading ? "Sending..." : "Submit"}
+                    </button>
+                  </form>
+                </div>
+
+                {/* Dynamic Text Section */}
+                <div className="col-6">
+                  <div className="text-center">
+                    <h3>{text || "Default Text"}</h3>
+                  </div>
+                </div>
               </div>
-            </p>
-          </div>
+            </div>
+          </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
