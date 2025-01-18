@@ -10,10 +10,10 @@ const Bottum = () => {
           {/* Contact Information */}
           <div className="col-md-4">
             <h4 className="footer-title">Contact Information</h4>
-            <p><FaPhoneAlt /> <span>8483041355 / 7021795042 / 9881278576</span></p>
-            <p><FaEnvelope /> <span>neetaprasad70@yahoo.com</span></p>
-            <p><FaMapMarkerAlt /> <span>SUSHIRMALA FOUNDATION, SHOP 11, SHUBHLAXMI SHOPPING CENTRE, VASANT NAGRI, VASAI EAST, PALGHAR - 401208</span></p>
-            <p>Working Hours: Mon-Fri: 1.30 pm to 6 pm</p>
+            <h6><FaPhoneAlt /> <span>8483041355 / 7021795042 / 9881278576</span></h6>
+            <h6><FaEnvelope /> <span>neetaprasad70@yahoo.com</span></h6>
+            <h6><FaMapMarkerAlt /> <span>SUSHIRMALA FOUNDATION, SHOP 11, SHUBHLAXMI SHOPPING CENTRE, VASANT NAGRI, VASAI EAST, PALGHAR - 401208</span></h6>
+            <h6>Working Hours: Mon-Fri: 1.30 pm to 6 pm</h6>
           </div>
 
           {/* Social Media Links */}
@@ -41,7 +41,7 @@ const Bottum = () => {
 
         {/* Footer Note */}
         <div className="footer-note text-center mt-4">
-          <p>© 2024 Sushirmala Foundation. All rights reserved.</p>
+          <h6>© 2024 Sushirmala Foundation. All rights reserved.</h6>
         </div>
       </div>
     </footer>
