@@ -1,5 +1,6 @@
 import {
   bgfirst,
+  bg,
   branch,
   distribution,
   donation,
@@ -58,6 +59,7 @@ import {
 
 export const logo = Sushirmala_Logo;
 export const backgrounds = bgfirst;
+export const bgImage = bg;
 export const image = [g1, g2, g3, g4, g5, g6, g7, g8];
 const activ = [volunteer, branch, distribution, donation];
 export const card = [jelly, pooja1];
